@@ -87,6 +87,8 @@ func main() {
 				".alt",
 				".swp",
 				".sav",
+			        ".git",
+			        ".txt",
 
                         }
 
