@@ -60,7 +60,35 @@ func main() {
 				".do",
 				".jsp",
 				".jspa",
-			}
+				".zip",
+				".txt",
+				".conf",
+				".cnf",
+				".ini",
+				".tgz",
+				".tar",
+				".gz",
+				".tar",
+				".gz",
+				".sql",
+				".bak",
+				".backup",
+				".bu",
+				".orig",
+				".old",
+				".config",
+				".db",
+				".cfg",
+				".sh",
+				".test",
+				".bck",
+				".psql",
+				".back",
+				".alt",
+				".swp",
+				".sav",
+
+                        }
 
 			p := strings.ToLower(u.EscapedPath())
 			for _, e := range exts {
