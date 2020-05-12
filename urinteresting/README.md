@@ -1,4 +1,4 @@
-# Urinteresting Modified
+# Urinteresting 
 
 Accept URLs on stdin, output the ones that look 'interesting'
 
@@ -7,10 +7,10 @@ Accept URLs on stdin, output the ones that look 'interesting'
 With Go:
 
 ```
-▶ go get -u github.com/1ndianl33t/1ndi-hacks/urinteresting
+▶ go get -u github.com/tomnomnom/hacks/urinteresting
 ```
 
 
 
-### Contributors 
+### Contact 
 [![Twitter](https://img.shields.io/badge/twitter-@1ndianl33t-blue.svg)](https://twitter.com/1ndianl33t)
