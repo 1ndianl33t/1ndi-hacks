@@ -89,6 +89,8 @@ func main() {
 				".sav",
 			        ".git",
 			        ".txt",
+                                ".log",
+                                ".gitignore",
 
                         }
 
@@ -229,6 +231,7 @@ func isBoringStaticFile(u *url.URL) bool {
 		".jpeg",
 		".gif",
 		".ico",
+                "sitemap.xml",
 	}
 
 	p := strings.ToLower(u.EscapedPath())
