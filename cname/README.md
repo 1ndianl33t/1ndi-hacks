@@ -1,6 +1,6 @@
 # CNAME 
 
-Accept URLs on stdin, output the ones that look 'Cname'
+Accept URLs on stdin, output the ones that look `CNAME`
 ## Install
 
 With Go:
