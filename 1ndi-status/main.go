@@ -13,7 +13,7 @@ func printStatus(req *http.Request, resp *http.Response, err error) {
         if err != nil {
                 return
         }
-        fmt.Printf("%s: %s\n", resp.Srtatus, req.URL)
+        fmt.Printf("%s: %s\n", resp.Status, req.URL)
 }
 
 func main() {
