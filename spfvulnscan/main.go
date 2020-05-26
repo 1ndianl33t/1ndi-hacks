@@ -1,7 +1,7 @@
 package main
  
 import (
-	      "fmt"
+	"fmt"
         "net"
         "bufio"
         "os"
@@ -16,4 +16,5 @@ func main() {
 	for _, txt := range txtrecords {
 		fmt.Println(txt)
 	}
-}
+ }
+}	
