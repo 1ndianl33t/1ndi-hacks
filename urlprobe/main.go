@@ -29,7 +29,7 @@ func printStatus(req *http.Request, resp *http.Response, err error) {
         if err != nil {
                 return
         }
-        fmt.Printf("[%d]: L %d : %s\n", resp.StatusCode, resp.ContentLength, req.URL)
+        fmt.Printf("[%d] L %d : %s\n", resp.StatusCode, resp.ContentLength, req.URL)
 }
 
 func main() {
