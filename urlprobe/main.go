@@ -30,7 +30,7 @@ func printStatus(req *http.Request, resp *http.Response, err error) {
                 return
         }
         fmt.Printf("[%d]: L %d : %s\n", resp.StatusCode, resp.ContentLength, req.URL)
-
+}
 
 func main() {
         Banner ()
