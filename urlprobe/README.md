@@ -1,7 +1,7 @@
 # URLProbe
 
 
-*Takesakes a list of URLs and returns their HTTP response codes*
+*Take a list of URLs and returns their HTTP response codes*
 
 
 ## Install
