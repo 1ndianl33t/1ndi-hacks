@@ -1,4 +1,4 @@
-# 1ndi-status
+# URLProbe
 
 *Urls Status Code Checker*
 
@@ -8,7 +8,7 @@ Accept URLs on stdin, output the ones that look `status codes`
 With Go:
 
 ```bash
-▶ go get -u github.com/1ndianl33t/1ndi-hacks/1ndi-status
+▶ go get -u github.com/1ndianl33t/1ndi-hacks/urlprobe
 ```
 
 
