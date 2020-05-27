@@ -8,7 +8,29 @@ import (
         "os"
         "time"
 )
+import (
+        "bufio"
+        "fmt"
+        "github.com/fatih/color"
+        "github.com/tomnomnom/gahttp"
+        "net/http"
+        "os"
+        "time"
+)
 
+func Banner() {
+        color.HiCyan(`
+ ____ _____________.____   __________              ___.
+|    |   \______   \    |  \______   \_______  ____\_ |__   ____
+|    |   /|       _/    |   |     ___/\_  __ \/  _ \| __ \_/ __ \
+|    |  / |    |   \    |___|    |     |  | \(  <_> ) \_\ \  ___/
+|______/  |____|_  /_______ \____|     |__|   \____/|___  /\___  >
+                 \/        \/                           \/     \/   V 1.0`)
+
+        color.HiYellow("URLProbe:- Urls Status Code Checker")
+
+        color.HiRed("https://github.com/1ndianl33t")
+}
 func printStatus(req *http.Request, resp *http.Response, err error) {
         if err != nil {
                 return
@@ -17,6 +39,7 @@ func printStatus(req *http.Request, resp *http.Response, err error) {
 }
 
 func main() {
+        Banner ()
         p := gahttp.NewPipeline()
         p.SetConcurrency(20)
         p.SetRateLimit(time.Second * 10)
