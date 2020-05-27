@@ -1,8 +1,9 @@
 # URLProbe
 
-*Urls Status Code Checker*
 
-Accept URLs on stdin, output the ones that look `status codes`
+*Takesakes a list of URLs and returns their HTTP response codes*
+
+
 ## Install
 
 With Go:
