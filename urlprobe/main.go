@@ -1,21 +1,15 @@
+
+
 package main
 
 import (
         "bufio"
         "fmt"
-        "github.com/tomnomnom/gahttp"
         "net/http"
         "os"
         "time"
-)
-import (
-        "bufio"
-        "fmt"
         "github.com/fatih/color"
         "github.com/tomnomnom/gahttp"
-        "net/http"
-        "os"
-        "time"
 )
 
 func Banner() {
@@ -53,3 +47,5 @@ func main() {
 
         p.Wait()
 }
+
+
