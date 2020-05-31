@@ -35,17 +35,14 @@ func printStatus(req *http.Request, resp *http.Response, err error) {
 
 func main() {
         Banner ()
-        var unique bool
-	flag.BoolVar(&Setconcurrency, "c", false, "")
-	flag.BoolVar(&Setconcurrency, "conc", false, "")
+        var concurrency = 50
+	flag.IntVar(&concurrency, "concurrency", 50, "")
+	flag.IntVar(&concurrency, "c", 50, "")
 
-	var verbose bool
-	flag.BoolVar(&SetRateLimit, "t", false, "")
-	flag.BoolVar(&SetRateLimit, "time", false, "")
 
 	flag.Parse()
         p := gahttp.NewPipeline()
-        p.SetConcurrency(50)
+        p.SetConcurrency(concurrency)
         p.SetRateLimit(time.Second * 05)
         urls := gahttp.Wrap(printStatus, gahttp.CloseBody)
         sc := bufio.NewScanner(os.Stdin)
@@ -68,11 +65,11 @@ func init() {
 
 		h += "Options:\n"
 		h += "  -c, --conc   set Concurrency\n\n\"
-		h += "  -t, --time  set Time\n"
+
                 h += "Examples:\n"
 		h += "  cat urls.txt | urlprobe \n"
 
-		h += "  cat urls.txt | unfurl -c 50 -t 10\n"
+		h += "  cat urls.txt | unfurl -c 50 \n"
 
 		fmt.Fprint(os.Stderr, h)
         }
