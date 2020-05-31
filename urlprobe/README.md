@@ -15,6 +15,7 @@ With Go:
 ## usage
 ```bash
 ▶ cat urls.txt | urlprobe 
+▶ cat urls.txt | urlprobe -c 100 
 ```
 ## Output
 ```bash
