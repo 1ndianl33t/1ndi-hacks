@@ -35,8 +35,8 @@ func printStatus(req *http.Request, resp *http.Response, err error) {
 func main() {
         Banner ()
         p := gahttp.NewPipeline()
-        p.SetConcurrency(20)
-        p.SetRateLimit(time.Second * 10)
+        p.SetConcurrency(10)
+        p.SetRateLimit(time.Second * 05)
         urls := gahttp.Wrap(printStatus, gahttp.CloseBody)
         sc := bufio.NewScanner(os.Stdin)
         for sc.Scan() {
