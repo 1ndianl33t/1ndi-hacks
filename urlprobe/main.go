@@ -36,12 +36,12 @@ func main() {
         var concurrency = 50
         flag.IntVar(&concurrency, "c", 50, "")
 
-        ///var times = 05
-        ///flag.IntVar(&times, "t", 05, "")
+        var times int = 05
+        flag.IntVar(&times, "t", 05, "")
         flag.Parse()
         p := gahttp.NewPipeline()
         p.SetConcurrency(concurrency)
-        p.SetRateLimit(time.Second * 05)
+        p.SetRateLimit(time.Duration(times) * time.Second)
         urls := gahttp.Wrap(printStatus, gahttp.CloseBody)
         sc := bufio.NewScanner(os.Stdin)
         for sc.Scan() {
