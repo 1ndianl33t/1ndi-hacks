@@ -21,6 +21,10 @@ With Go:
 ```bash
 [Status code] Content-Length : URL
 [200] L 24 https://example.com/robots.txt
+
+## Demo
+https://asciinema.org/a/335804
+
 ```
 ### Contact
 [![Twitter](https://img.shields.io/badge/twitter-@1ndianl33t-blue.svg)](https://twitter.com/1ndianl33t)
