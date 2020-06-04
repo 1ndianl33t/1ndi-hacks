@@ -1,29 +1,7 @@
 # URLProbe
 
+Now at https://github.com/1ndianl33t/
 
-*Take a list of URLs and returns their HTTP response codes*
-
-***Warning: This is a work in progress.***
-
-## Install
-
-With Go:
-
-```bash
-▶ go get -u github.com/1ndianl33t/1ndi-hacks/urlprobe
-```
-## usage
-```bash
-▶ cat urls.txt | urlprobe 
-▶ cat urls.txt | urlprobe -c 100 -t 10
-```
-## Output
-```bash
-[Status code] Content-Length : URL
-[200] L 24 https://example.com/robots.txt
-```
-## Demo
-https://asciinema.org/a/335804
 
 
 ### Contact
