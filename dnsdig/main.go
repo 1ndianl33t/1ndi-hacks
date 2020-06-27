@@ -4,10 +4,27 @@ import (
         "bufio"
         "flag"
         "fmt"
-    //  "github.com/fatih/color"
         "net"
         "os"
 )
+
+var (
+        Info = Green
+        Name = Red
+)
+
+var (
+        Red   = Color("\033[1;31m%s\033[0m")
+        Green = Color("\033[1;32m%s\033[0m")
+)
+
+func Color(colorString string) func(...interface{}) string {
+        sprint := func(args ...interface{}) string {
+                return fmt.Sprintf(colorString,
+                        fmt.Sprint(args...))
+        }
+        return sprint
+}
 
 func main() {
         var domains []string
@@ -16,10 +33,9 @@ func main() {
         if flag.NArg() > 0 {
 
                 domains = []string{flag.Arg(0)}
-                 /// fmt.Println("Got single")
+
         } else {
 
-               
                 sc := bufio.NewScanner(os.Stdin)
                 for sc.Scan() {
                         domains = append(domains, sc.Text())
@@ -30,15 +46,18 @@ func main() {
                 }
 
         }
+        Ip(domains)
+
+}
+
+func Ip(domains []string) {
         for _, fetch := range domains {
                 ips, _ := net.LookupIP(fetch)
-                // color.HiRed("%s   ", fetch)
-                fmt.Printf("%s  ", fetch)
+                fmt.Printf(Name(fetch) + "        ")
                 for _, ip := range ips {
-                        //color.HiGreen("%s,", ip.String())
-                        fmt.Printf("%s,", ip.String())
+
+                        fmt.Printf(" " + Info(ip.String()))
                 }
                 fmt.Printf("\n")
         }
-
 }
