@@ -87,12 +87,12 @@ func main() {
 				".alt",
 				".swp",
 				".sav",
-			        ".git",
-			        ".txt",
-                                ".log",
-                                ".gitignore",
+			  ".git",
+			  ".txt",
+        ".log",
+        ".gitignore",
 
-                        }
+  }
 
 			p := strings.ToLower(u.EscapedPath())
 			for _, e := range exts {
@@ -217,7 +217,7 @@ func qsCheck(k, v string) bool {
 func isBoringStaticFile(u *url.URL) bool {
 	exts := []string{
 		// OK, so JS could be interesting, but 99% of the time it's boring.
-		".js",
+		//".js",
 
 		".html",
 		".htm",
